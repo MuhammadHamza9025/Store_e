@@ -31,7 +31,7 @@ const ShopContextProvider = (props) => {
                 theme: "light",
                 transition: Bounce,
             })
-            await fetch('https://store-e.vercel.app/cart', {
+            await fetch('https://backend-w1zs.vercel.app/cart', {
                 method: "POST",
                 headers: {
                     Accept: 'application/form-data',
