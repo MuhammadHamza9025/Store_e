@@ -30,7 +30,7 @@ const ShopCategory = (props, { category }) => {
                 </div>
             </div>
             <div className='flex w-[85%] flex-wrap justify-center m-auto mt-6 '>
-                {all_product1.map((items) => {
+                {all_product1?.map((items) => {
                     if (items && items.category && props.category === items.category) {
 
 
