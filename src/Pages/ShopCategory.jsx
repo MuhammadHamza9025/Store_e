@@ -15,7 +15,7 @@ const ShopCategory = (props, { category }) => {
 
 
 
-    const length = all_product1.filter((mcategory) => props.category === mcategory.category).length
+    const length = all_product1.find((mcategory) => props.category == mcategory.category).length
 
 
     return (
