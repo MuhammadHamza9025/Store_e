@@ -31,7 +31,7 @@ const ShopContextProvider = (props) => {
                 theme: "light",
                 transition: Bounce,
             })
-            await fetch('https://store-e.vercel.app/cart', {
+            await fetch('https://backend-w1zs.vercel.app/cart', {
                 method: "POST",
                 headers: {
                     Accept: 'application/form-data',
@@ -134,8 +134,8 @@ const ShopContextProvider = (props) => {
 
 
 
-
-    const contextvalue = { newdata, cartItem, setcartItem, addtocart, removetocart, getcartdataf, newcoll }
+    const all_product1 = newdata;
+    const contextvalue = { all_product1, cartItem, setcartItem, addtocart, removetocart, getcartdataf, newcoll }
 
     return (
 
