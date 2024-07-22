@@ -7,7 +7,8 @@ import dropdown from '../Components/Assets/dropdown_icon.png'
 const ShopCategory = (props, { category }) => {
 
 
-    const { all_product1 } = useContext(ShopContext)
+    const { newdata } = useContext(ShopContext)
+    console.log(newdata)
     // const newarray = all_product.concat(newdata)
     // console.log(newdata)
 
@@ -23,14 +24,14 @@ const ShopCategory = (props, { category }) => {
                 <img src={props.banner} alt="" className='m-auto w-[90%] h-[120px] sm:h-full sm:w-[80%]' />
             </div>
             <div className='flex justify-between m-auto w-[77%] mt-10'>
-                <span className='text-xs sm:text-base'><b>Showing 00</b> out of {all_product1.length}  Items</span>
+                <span className='text-xs sm:text-base'><b>Showing 00</b> out of {newdata.length}  Items</span>
 
                 <div className='flex justify-between border items-center border-gray-600 rounded-xl px-[0.9em] cursor-pointer ' >
                     Sort by   <img src={dropdown} alt="" className='h-[7px] mx-2' />
                 </div>
             </div>
             <div className='flex w-[85%] flex-wrap justify-center m-auto mt-6 '>
-                {all_product1?.map((items) => {
+                {newdata?.map((items) => {
                     if (items && items.category && props.category === items.category) {
 
 

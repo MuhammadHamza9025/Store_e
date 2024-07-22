@@ -66,14 +66,14 @@ const ShopContextProvider = (props) => {
 
     //Getting products from database
     const getapidata = async () => {
-        const getapi = await fetch('https://store-e.vercel.app/addproducts')
+        const getapi = await fetch('https://backend-w1zs.vercel.app/addproducts')
         const result = await getapi.json()
         setnewdata(result)
     }
 
     //Gtting carts from Database
     const getcartdataf = async () => {
-        const cartitem = await fetch('https://store-e.vercel.app/getcart', {
+        const cartitem = await fetch('https://backend-w1zs.vercel.app/getcart', {
             method: "POST",
             headers: {
                 Accept: 'application/form-data',
@@ -101,7 +101,7 @@ const ShopContextProvider = (props) => {
             theme: "light",
             transition: Bounce,
         })
-        const detetecarts = await fetch(`https://store-e.vercel.app/getcart/${id}`, {
+        const detetecarts = await fetch(`https://backend-w1zs.vercel.app/getcart/${id}`, {
             method: "DELETE",
             headers: {
                 'auth-token': `${localStorage.getItem('auth-token')}`,
@@ -117,7 +117,7 @@ const ShopContextProvider = (props) => {
 
     const newcollection = async () => {
 
-        const fetchcollection = await fetch("https://store-e.vercel.app/newcollection")
+        const fetchcollection = await fetch("https://backend-w1zs.vercel.app/newcollection")
         const res = await fetchcollection.json()
         setnewcollectiondata(res)
     }
@@ -134,8 +134,8 @@ const ShopContextProvider = (props) => {
 
 
 
-    const all_product1 = newdata;
-    const contextvalue = { all_product1, cartItem, setcartItem, addtocart, removetocart, getcartdataf, newcoll }
+
+    const contextvalue = { newdata, cartItem, setcartItem, addtocart, removetocart, getcartdataf, newcoll }
 
     return (
 
